@@ -1,8 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import { getCookieClient } from "@/lib/cookieClient"; // Importando o getCookieServer
-import { api } from "@/services/api"; // Importando a api
+import { getCookieClient } from "@/lib/cookieClient";       // Importando o getCookieServer
+import { api } from "@/services/api";                       // Importando a api
 
 import styles from "./styles.module.scss"
 
@@ -11,6 +11,7 @@ export function ViewCategory() {
   const [categories, setCategories] = useState([]); // Estado para armazenar as categorias
 
   // Função para buscar as categorias ao carregar a página
+  
   useEffect(() => {
     async function fetchCategories() {
       try {
@@ -33,6 +34,7 @@ export function ViewCategory() {
   return (
     <main className={styles.container}>
       <h2>Categorias Cadastradas</h2>
+
       <ol>
         {categories.map((category: any) => (
           <li key={category.id}>{category.name}</li>

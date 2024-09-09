@@ -8,6 +8,9 @@ layout.scss esta em volta das paginas
 
 -- redirect so pode ser usado em use client
 
+--  qndo a pagina é renderiza pela lado do servidor podemos fazer requisições diretamente dentro
+do component sem ter q usar useEffect por ex...
+
 -----------------------------------------------------------------------------------
 
 obs: -- importar o axios dentro da pasta sercives - dentro de SRC - fora de app
