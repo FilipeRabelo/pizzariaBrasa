@@ -1,0 +1,71 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: 0;
+ }
+
+:root{
+  --white: #FFF;
+  --black: #000;
+
+  --dark-900: #101026;
+  --dark-700: #1d1d2e;
+
+  --gray-100: #8a8a8a;
+  --green-900: #3fffa3;
+  --red-900: #FF3f4b;
+
+  --violet: #7f29e2;
+  --green-neon: #39ff14;
+
+  --red-crimson: crimson;
+}
+
+button{
+  cursor: pointer;
+}
+
+a{
+  color: inherit;
+  text-rendering: none;
+}
+
+html{
+  background-color: var(--dark-700);
+}
+
+body{
+  background-color: var(--dark-700);
+}
+
+body, input, textarea, select, button{
+  font: 400, 1rem sans-serif;  // 1rem = 16px
+}
+
+
+@media(max-width: 720px){
+  html{
+    font-size: 87.5%;
+  }
+}
+
+@media(max-width: 1080px){
+  html{
+    font-size: 93.74%;
+  }
+}
+
+/* Aqui você define a cor da barra de rolagem */
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: crimson;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--dark-900);
+}

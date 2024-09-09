@@ -1,0 +1,101 @@
+// Este é o seu arquivo de esquema Prisma,
+// saiba mais sobre isso na documentação: https://pris.ly/d/prisma-schema
+
+// Procurando maneiras de acelerar suas consultas ou escalar facilmente com suas funções sem servidor ou de borda?
+// Experimente o Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// tabelas - migrations
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// para criar uma migration => yarn prisma migrate dev
+
+model User {
+
+  id String @id @default(uuid())
+  name String
+  email String
+  password String
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  @@map("users")
+}
+
+
+// @@map("users") para mapear no BD
+// ? @default(now()) = ? -> ele é opcional e vai pegar o @default -> padrao a data de agora (now())
+
+model Category {
+
+  id String @id @default(uuid())
+  name String
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  @@map("categories")
+  products Product[]
+}
+// products Product[] é a relação do produto com a categoria
+
+
+// produto tem uma relação com a categoria
+model Product{
+
+  id String @id @default(uuid())
+  name String
+  price String
+  description String
+  banner String
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  category Category @relation(fields: [category_id], references: [id])
+
+  @@map("products")
+
+  category_id String
+  items Item[]
+}
+
+model Order {
+
+  id String @id @default(uuid())
+  table Int
+  status Boolean @default(false)
+  draft Boolean @default(true)
+  name String?
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  @@map("orders")
+
+  items Item[]
+}
+
+// name String? -> nome é opcional
+
+model Item{
+  id String @id @default(uuid())
+  amount Int
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  order Order @relation(fields: [order_id], references: [id])
+  product Product @relation(fields: [product_id], references: [id])
+
+  @@map("itens")
+
+  order_id String
+  product_id String
+}
+// amount Int -> quantidade
+
+// ? Enter a name for the new migration: ---»    create-models-pizzaria

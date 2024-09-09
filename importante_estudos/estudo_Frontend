@@ -1,0 +1,21 @@
+layout.scss esta em volta das paginas
+
+-- paginas aninhadas...
+-> dashboard -> category -> page.tsx
+
+-- biblioteca sonner - de alertas modal - importa dentro do layout.tsx - app - 
+-- somente em funcao user client
+
+-- redirect so pode ser usado em use client
+
+-----------------------------------------------------------------------------------
+
+obs: -- importar o axios dentro da pasta sercives - dentro de SRC - fora de app
+
+    -- npx create-next-app@latest primeiroApp
+    -- npm run dev
+    -- npm install sass                        -- instalar o sass css --
+    -- npm install axios                       -- para requisição http --
+    -- npm install cookies-next
+    -- npm install lucide-react                -- biblioteca para icones
+    -- npm install sonner                      -- biblioteca sonner - de alertas modal

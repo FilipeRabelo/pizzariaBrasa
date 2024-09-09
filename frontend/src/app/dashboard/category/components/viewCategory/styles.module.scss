@@ -1,0 +1,24 @@
+.container {
+  max-width: 720px;
+  margin-top: 30px;
+  
+
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: var(--white);
+  }
+
+  ol{
+    // margin-left: 20px;
+    margin: 20px 25px 0;
+  }
+
+  li{    
+    color: var(--white);
+    margin: 16px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

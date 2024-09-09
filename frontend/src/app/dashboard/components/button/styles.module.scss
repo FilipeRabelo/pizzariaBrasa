@@ -1,0 +1,18 @@
+
+.button{
+  height: 40px;
+  border-radius: 8px;
+  border: 0;
+  background-color: var(--green-900);
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--white);
+  transition: all 0.5s;
+
+  &:hover { 
+    transform: scale(1) translateY(-1px);
+    box-shadow: 0 0 8px var(--green-900);
+    // background-color: chartreuse;
+    color: #000;
+  }
+}
