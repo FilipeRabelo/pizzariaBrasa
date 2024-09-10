@@ -59,7 +59,7 @@
   flex-direction: column;
   margin: 24px 0;
   font-size: 18px;
-
+  font-weight: bold;
 }
 
 .itemProduct {
@@ -76,13 +76,13 @@
 
 }
 
-.itemAmount{
+.itemAmount {
   margin-top: 8px;
   font-size: 16px;
   font-weight: 600;
 
-  b{
-    color: #DC143C;    
+  b {
+    color: #DC143C;
   }
 }
 
@@ -100,6 +100,8 @@
   &:hover {
     background-color: transparent;
     color: #39FF14;
+    box-shadow: 0 0 25px #39FF14;
+    border: #39FF14;
   }
 }
 

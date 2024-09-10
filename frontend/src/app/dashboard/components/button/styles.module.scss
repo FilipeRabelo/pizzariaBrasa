@@ -3,16 +3,17 @@
   height: 40px;
   border-radius: 8px;
   border: 0;
-  background-color: var(--green-900);
+  background-color: #39FF14;
   font-weight: bold;
   font-size: 18px;
-  color: var(--white);
+  color: #000;
   transition: all 0.5s;
 
   &:hover { 
     transform: scale(1) translateY(-1px);
-    box-shadow: 0 0 8px var(--green-900);
-    // background-color: chartreuse;
-    color: #000;
+    box-shadow: 0 0 25px #39FF14;
+    background-color: transparent;
+    color: #39FF14;
+    border: #39FF14;
   }
 }
