@@ -1,10 +1,10 @@
 "use client"
 
 import { use }          from "react";
+import { OrderContext } from "@/providers/order";
 import { RefreshCw }    from "lucide-react";
 import { OrderProps }   from "@/lib/order.type";
 import { ModalOrder }   from "@/app/dashboard/components/modal";
-import { OrderContext } from "@/providers/order";
 import styles           from "./styles.module.scss";
 
 interface Props{
@@ -15,8 +15,8 @@ export default function Orders({orders}: Props) {
 
   const { isOpen, onRequestOpen } = use(OrderContext);  {/* use pega o contexto do providers */}
 
-  function handleDetailOrder(){
-    alert("teste")
+  function handleDetailOrder(order_id: string){
+    onRequestOpen(order_id)
   }
   
   return (
@@ -35,7 +35,7 @@ export default function Orders({orders}: Props) {
             <button
               key={order.id}
               className={styles.orderItem}
-              onClick={handleDetailOrder}
+              onClick={() => handleDetailOrder(order.id)}
             >
 
               <div className={styles.tag}></div>

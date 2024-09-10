@@ -22,10 +22,12 @@
   button {
     background: transparent;
     border: 0;
-    transition: filter 0.5s;
+    transition: all 0.8s;
 
     &:hover{
-      filter: brightness(1.35)
+      filter: brightness(1.35);
+      transform: scale(1.5) rotate(600deg);
+      color: #39FF14;
     }
   }
 }
@@ -47,7 +49,7 @@
   transition: filter 0.7s;
 
   &:hover{
-    filter:brightness(1.40)
+    filter:brightness(1.40);    
   }
 }
 

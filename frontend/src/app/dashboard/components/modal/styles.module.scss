@@ -27,8 +27,10 @@
   color: var(--white);
 
   h2{
-    margin-bottom: 40px;
-    margin-top: 8px;
+    // margin-bottom: 40px;
+    // margin-top: 8px;
+    margin: 8px auto 40px;
+    text-align: center;
   }
 }
 
@@ -45,6 +47,16 @@
 .dialogBack{
   background-color: transparent;
   border: 0;
+  color: #DC143C;
+  font-size: 27px;
+  display: flex;
+  transition: all 0.8s;
+
+  &:hover{
+    // transform: scale(1.2);
+    // transform: rotate(360deg);
+    transform: scale(1.3) rotate(460deg);
+  }
 }
 
 .item{
@@ -60,6 +72,7 @@
   color: #FFFFFF;
   margin-top: 8px;
   font-weight: 600;
+ 
 }
 
 .itemProduct{
