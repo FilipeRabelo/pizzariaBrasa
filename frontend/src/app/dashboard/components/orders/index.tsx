@@ -15,8 +15,8 @@ export default function Orders({orders}: Props) {
 
   const { isOpen, onRequestOpen } = use(OrderContext);  {/* use pega o contexto do providers */}
 
-  function handleDetailOrder(order_id: string){
-    onRequestOpen(order_id)
+  async function handleDetailOrder(order_id: string){
+    await onRequestOpen(order_id)
   }
   
   return (
