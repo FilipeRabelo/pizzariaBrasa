@@ -81,9 +81,9 @@
   font-size: 16px;
   font-weight: 600;
 
-  b {
-    color: #DC143C;
-  }
+  // b {
+  //   color: #DC143C;
+  // }
 }
 
 .buttonOrder {
@@ -114,4 +114,10 @@
   font-weight: bold;
   font-size: 19px;
   text-transform: uppercase;
+}
+
+.totalValue{
+  margin: 8px 0 16px 0;
+  border-bottom: 2px solid #39FF14;
+  padding-bottom: 16px;
 }

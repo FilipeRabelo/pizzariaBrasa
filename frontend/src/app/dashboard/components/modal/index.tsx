@@ -1,12 +1,21 @@
 "use client"
 
-import style from "./styles.module.scss"
-import { X } from "lucide-react";    // -- icone
-import { OrderContext } from "@/providers/order"
-import { use } from "react"
+import style                    from "./styles.module.scss"
+import { X }                    from "lucide-react";    // -- icone
+import { OrderContext }         from "@/providers/order"
+import { use }                  from "react";
+import { calculateTotalOrder }  from "@/lib/helper";
 
 export function ModalOrder() {
-  const { onRequestClose, order } = use(OrderContext)
+
+  const { onRequestClose, order, finishOrder } = use(OrderContext)
+
+
+  // -- BOTAO PARA FINALIZAR O PEDIDO
+
+  async function handleFinishOrder(){  // funcao vai ser renderiza dentro do provider
+    await finishOrder(order[0].order.id)
+  }
 
   return (
     <dialog className={style.dialogContainer}>
@@ -31,19 +40,24 @@ export function ModalOrder() {
 
           {order.map(item => (
             <section className={style.item} key={item.id}>
+
               <span className={style.itemProduct}>
                 <b>{item.product.name}</b>   
               </span>
               <span className={style.itemAmount}>
-                Quantidade: <b>{item.amount}</b>
+                Quantidade: <b>{item.amount}</b> - 
+                R$: {parseFloat(item.product.price) * item.amount}
               </span>
               <span className={style.description}>
                 Descrição: {item.product.description}
               </span>
+
             </section>
           ))}
 
-          <button className={style.buttonOrder}>
+          <h3 className={style.totalValue}>Valor Total do pedido: {calculateTotalOrder(order)}</h3>
+
+          <button className={style.buttonOrder} onClick={handleFinishOrder}>
             Concluir o pedido
           </button>
 
