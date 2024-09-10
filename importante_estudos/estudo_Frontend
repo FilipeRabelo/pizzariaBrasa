@@ -11,6 +11,8 @@ layout.scss esta em volta das paginas
 --  qndo a pagina é renderiza pela lado do servidor podemos fazer requisições diretamente dentro
 do component sem ter q usar useEffect por ex...
 
+-- so podemos consulmir o contexto do PROVIDERS em componentes use client
+
 -----------------------------------------------------------------------------------
 
 obs: -- importar o axios dentro da pasta sercives - dentro de SRC - fora de app
