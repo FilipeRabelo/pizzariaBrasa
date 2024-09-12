@@ -52,7 +52,11 @@ export default function Orders({orders}: Props) {
             >
 
               <div className={styles.tag}></div>
-              <span>Mesa: {order.table}</span>
+              <div className={styles.span}> 
+                <span >Mesa :  {order.table}</span>
+                <span >{!order.name ? "" : order.name}</span>
+              </div>
+              
             </button>
 
           ))}

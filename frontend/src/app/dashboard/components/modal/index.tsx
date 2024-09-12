@@ -41,6 +41,12 @@ export function ModalOrder() {
           {order.map(item => (
             <section className={style.item} key={item.id}>
 
+              <img
+                src={item.product.banner}
+                width={120}
+                height={120}
+              />
+
               <span className={style.itemProduct}>
                 <b>{item.product.name}</b>   
               </span>

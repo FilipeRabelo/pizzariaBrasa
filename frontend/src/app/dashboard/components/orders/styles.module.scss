@@ -24,10 +24,11 @@
     border: 0;
     transition: all 0.8s;
 
-    &:hover{
+    &:hover {
       filter: brightness(1.35);
       transform: scale(1.5) rotate(600deg);
       color: #39FF14;
+      border: 1px solid #39FF14;
     }
   }
 }
@@ -35,10 +36,24 @@
 .listOrders {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 16px; 
 }
 
-.orderItem{
+.span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: start;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.4s;
+
+  &:hover{
+    color: #39FF14;
+  }
+}
+
+.orderItem {
   display: flex;
   background-color: var(--dark-900);
   align-items: center;
@@ -48,20 +63,20 @@
   color: var(--white);
   transition: filter 0.7s;
 
-  &:hover{
-    filter:brightness(1.40);    
+  &:hover {
+    filter: brightness(1.40);
   }
 }
 
-.tag{
+.tag {
   width: 9px;
   height: 60px;
   background-color: var(--green-900);
-  border-radius:  6px 0 0 6px;
+  border-radius: 6px 0 0 6px;
   margin-right: 16px;
 }
 
-.emptyItem{
+.emptyItem {
   color: #39FF14;
   font-weight: bold;
   font-size: 24px;
