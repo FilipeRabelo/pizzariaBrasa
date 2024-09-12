@@ -13,6 +13,9 @@ do component sem ter q usar useEffect por ex...
 
 -- so podemos consulmir o contexto do PROVIDERS em componentes use client
 
+
+FRONT END
+
 -----------------------------------------------------------------------------------
 
 obs: -- importar o axios dentro da pasta sercives - dentro de SRC - fora de app

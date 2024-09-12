@@ -52,9 +52,10 @@ router.post('/category', isAuthenticated, new CreateCategoryController().handle)
 router.get('/category', isAuthenticated, new ListCategoryController().handle); // -- buscar
 
 
-// -- ROTAS PRODUCT // -- isAuthenticated para somente pessoas logadas ter acesso
+// -- ROTAS PRODUCT - MENU // -- isAuthenticated para somente pessoas logadas ter acesso
 
-router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle);    // -- para receber os dados
+// router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle);    // -- para receber os dados
+router.post('/product', isAuthenticated, new CreateProductController().handle);    // -- para receber os dados
 router.get('/category/product', isAuthenticated, new ListByCategoryController().handle); // -- get - buscar
 
 // -- ROTAS ORDER

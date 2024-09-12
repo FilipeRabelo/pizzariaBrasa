@@ -105,3 +105,13 @@ inicio yarn - pizzaria
     - yarn add @prisma/client       / para lidar os models usuarios, criar, atualizar tudo pelo prisma client
     - npx prisma init               / para iniciar o prisma
 
+    - npm install cloudinary
+    
+    - npm i express-fileupload
+    - npm install --save-dev @types/express-fileupload
+
+
+# -- cloudinary  -- para slavr imagens
+# -- para instalar no backend: npm install cloudinary
+# -- biblioteca auxiliar  do node : npm i express-fileupload
+# -- tipagens: npm install --save-dev @types/express-fileupload
