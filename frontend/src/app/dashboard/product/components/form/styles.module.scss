@@ -4,9 +4,13 @@
   padding: 0 16px;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 
   h1 {
+    font-size: 1.9rem;
+    margin: 16px 0;
     color: var(--white);
+    text-align: center;
   }
 
 }
@@ -17,7 +21,7 @@
   margin: 16px 0;
   gap: 16px;
 
-  select{
+  select {
     width: 100%;
     height: 40px;
     border-radius: 8px;
@@ -25,17 +29,29 @@
     color: var(--white);
     padding: 0 8px;
     border: 1px solid var(--gray-100);
+    transition: filter 0.5s;
+    font-weight: bold;
+
+    &:hover {
+      filter: brightness(1.40);
+    }
+
   }
 
-  textarea{
+  option {
+    font-weight: bold;
+  }
+
+  textarea {
     width: 100%;
     min-height: 120px;
     resize: none;
     padding: 8px;
+    font-weight: bold;
   }
 }
 
-.labelImage{
+.labelImage {
   width: 100%;
   height: 280px;
   position: relative;
@@ -48,31 +64,39 @@
   flex-direction: column;
   margin-bottom: 16px;
   border: 1px solid var(--gray-100);
+  
 
-  input{
-    display: none;    
+  input {
+    display: none;
+    transition: all 0.5s;
+
+    &:hover {
+      filter: brightness(1.40);
+    }
   }
 
-  span{
+  span {
+    font-weight: bold;
     z-index: 99;
     opacity: 0.8;
     transition: all 0.6s;
 
-    &:hover{
+    &:hover {
       opacity: 1;
-      transform: scale(1.5);         
+      transform: scale(1.5);
     }
   }
 }
 
-.previewImage{
+.previewImage {
   width: 100%;
   height: 100%;
   border-radius: 8px;
   object-fit: cover;
 }
 
-.input{
+.input {
+  font-weight: bold;
   border: 0;
   height: 40px;
   background-color: var(--dark-900);
@@ -80,4 +104,9 @@
   border-radius: 8px;
   padding: 0 8px;
   color: var(--white);
+  transition: all 0.5s;
+
+  &:hover {
+    filter: brightness(1.40);
+  }
 }

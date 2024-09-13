@@ -1,14 +1,14 @@
 "use client"
 
-import Image from "next/image";
-import styles from "./styles.module.scss"
-import { UploadCloud } from "lucide-react";
-import { ChangeEvent, useState } from "react";
-import { Button } from "@/app/dashboard/components/button"
-import { api } from "@/services/api";
-import { getCookieClient } from "@/lib/cookieClient";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation"
+import Image                      from "next/image";
+import styles                     from "./styles.module.scss"
+import { UploadCloud }            from "lucide-react";
+import { ChangeEvent, useState }  from "react";
+import { Button }                 from "@/app/dashboard/components/button"
+import { api }                    from "@/services/api";
+import { getCookieClient }        from "@/lib/cookieClient";
+import { toast }                  from "sonner";
+import { useRouter }              from "next/navigation"
 
 
 
@@ -29,10 +29,10 @@ export function Form({ categories }: Props) {
 
   async function handleRegisterProduct(formData: FormData){   //-- pegando o que foi digitado 
 
-    const categoryIndex    = formData.get("category");
-    const name        = formData.get("name");
-    const price       = formData.get("price");
-    const description = formData.get("description")
+    const categoryIndex   = formData.get("category");
+    const name            = formData.get("name");
+    const price           = formData.get("price");
+    const description     = formData.get("description")
 
     if (!name || !price || !description || !categoryIndex || !image){
       toast.warning("Preencha todos os campos"); 
