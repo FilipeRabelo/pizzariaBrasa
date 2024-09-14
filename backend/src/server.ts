@@ -42,6 +42,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => { // ti
 
 
 
-app.listen(3333, () =>
-  console.log("servidor online!!!! Bem-vindo Programador")
-);
+app.listen(process.env.PORT, () =>console.log("servidor online!!!! Bem-vindo Programador"));

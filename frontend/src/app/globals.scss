@@ -1,11 +1,15 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   outline: 0;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  text-decoration: none;
+  p{
+    color: #FFFFFF;
+  }
+}
 
-:root{
+:root {
   --white: #FFF;
   --black: #000;
 
@@ -22,36 +26,55 @@
   --red-crimson: crimson;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-a{
+a {
   color: inherit;
   text-rendering: none;
 }
 
-html{
+html {
   background-color: var(--dark-700);
 }
 
-body{
+footer {
+  margin-top: auto;
+}
+
+body {
   background-color: var(--dark-700);
 }
 
-body, input, textarea, select, button{
-  font: 400, 1rem sans-serif;  // 1rem = 16px
+body,
+input,
+textarea,
+select,
+button {
+  font: 400, 1rem sans-serif; // 1rem = 16px
+  text-decoration: none;
+}
+
+button,
+li,
+span,
+strong,
+h1,
+h2,
+h3{
+  text-transform: capitalize;
 }
 
 
-@media(max-width: 720px){
-  html{
+@media(max-width: 720px) {
+  html {
     font-size: 87.5%;
   }
 }
 
-@media(max-width: 1080px){
-  html{
+@media(max-width: 1080px) {
+  html {
     font-size: 93.74%;
   }
 }

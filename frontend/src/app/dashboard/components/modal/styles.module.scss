@@ -26,16 +26,10 @@
 
 }
 
-// .container{  
-//   margin: 16px 0;
-// }
-
 .headerModal {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // gap: 15px;
-
   border-bottom: 2px dashed crimson;
   margin-bottom: 36px;
   padding-bottom: 16px;
@@ -88,7 +82,7 @@
   img{
     box-shadow: 0 0 15px crimson;
     border-radius: 8px;
-    height: 210px;
+    height: 150px;
     width: auto;
     margin: 16px 0;
   }

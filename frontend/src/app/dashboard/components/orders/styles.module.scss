@@ -81,7 +81,11 @@
 }
 
 .emptyItem {
-  color: #39FF14;
+  padding: 16px;
+  box-shadow: 0 0 5px #FFFFFF;
+  color: #FFFFFF;
+  text-align: center;
+  justify-content: center;
   font-weight: bold;
   font-size: 24px;
   margin-top: 16px;

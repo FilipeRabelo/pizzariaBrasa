@@ -1,12 +1,14 @@
 .container {
   max-width: 720px;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--gray-100);
   padding: 16px;
   background-color: var(--dark-900);
   border-radius: 8px;
+  box-shadow: 0 0 10px crimson;
 
   h2 {
     font-size: 1.3rem;
@@ -22,13 +24,17 @@
     padding-left: 0;
     margin-left: 0;
 
+
   }
 
   li {
     text-transform: uppercase;
     color: var(--white);
     margin: 16px 0;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: bold;
+    border-bottom: 0.5px dashed var(--gray-100);
+    padding-top: 12px;
+    padding-bottom: 5px;
   }
 }

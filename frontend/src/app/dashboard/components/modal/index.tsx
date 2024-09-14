@@ -1,10 +1,10 @@
 "use client"
 
-import style from "./styles.module.scss"
-import { X } from "lucide-react";    // -- icone
-import { OrderContext } from "@/providers/order"
-import { use } from "react";
-import { calculateTotalOrder } from "@/lib/helper";
+import style                    from "./styles.module.scss"
+import { X }                    from "lucide-react";    // -- icone
+import { OrderContext }         from "@/providers/order"
+import { use }                  from "react";
+import { calculateTotalOrder }  from "@/lib/helper";
 
 export function ModalOrder() {
 
@@ -44,30 +44,29 @@ export function ModalOrder() {
             )}
           </div>
 
-          {order.map(item => (
-            <section className={style.item} key={item.id}>
-          
-              <span className={style.itemProduct}>
-                <b>{item.product.name}</b>
-              </span>
-              <span className={style.itemValor}>Valor: R$ {item.product.price}</span>
-              <span className={style.itemAmount}>
-                Quantidade: <b>{item.amount}</b> -
-                R$ {parseFloat(item.product.price) * item.amount}
-              </span>
-              <span className={style.description}>
-                Descrição: {item.product.description}
-              </span>
+          {order.map(item => {
+            const price = parseFloat(item.product.price).toFixed(2).replace('.', ',');
+            const total = (parseFloat(item.product.price) * item.amount).toFixed(2).replace('.', ',');
 
-              <img
-                src={item.product.banner}
-              // width={120}
-              // height={120}
-              />
-
-
-            </section>
-          ))}
+            return (
+              <section className={style.item} key={item.id}>
+                <span className={style.itemProduct}>
+                  <b>{item.product.name}</b>
+                </span>
+                <span className={style.itemValor}>Valor: R$ {price}</span>
+                <span className={style.itemAmount}>
+                  Quantidade: <b>{item.amount}</b> - R$ {total}
+                </span>
+                <span className={style.description}>
+                  Descrição: {item.product.description}
+                </span>
+                <img
+                  src={item.product.banner}
+                  alt={item.product.name}
+                />
+              </section>
+            );
+          })}
 
           <h3 className={style.totalValue}>Valor Total do pedido: R$ {calculateTotalOrder(order)}</h3>
 
@@ -82,3 +81,29 @@ export function ModalOrder() {
     </dialog>
   )
 }
+
+
+
+// {
+//   order.map(item => (
+//     <section className={style.item} key={item.id}>
+
+//       <span className={style.itemProduct}>
+//         <b>{item.product.name}</b>
+//       </span>
+//       <span className={style.itemValor}>Valor: R$ {item.product.price}</span>
+//       <span className={style.itemAmount}>
+//         Quantidade: <b>{item.amount}</b> -
+//         R$ {parseFloat(item.product.price) * item.amount}
+//       </span>
+//       <span className={style.description}>
+//         Descrição: {item.product.description}
+//       </span>
+
+//       <img
+//         src={item.product.banner}
+//       />
+
+//     </section>
+//   ))
+// }

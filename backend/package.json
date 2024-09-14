@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev src/server.ts",
+    "build": "tsc --build",
+    "start": "node dist/server.js",
+    "vercel-build": "prisma generate && prima migrate deploy",
+    "prima-generate": "prima generate"
   },
   "keywords": [],
   "author": "Filipe FullStack",

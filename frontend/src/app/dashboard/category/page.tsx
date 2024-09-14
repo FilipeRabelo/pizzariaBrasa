@@ -54,6 +54,7 @@ export default function Category(){
 
       </form>
 
+      <h2>Categorias Cadastradas</h2>
       <ViewCategory/>
 
     </main>

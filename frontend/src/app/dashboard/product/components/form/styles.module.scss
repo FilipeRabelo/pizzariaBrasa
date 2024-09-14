@@ -64,7 +64,7 @@
   flex-direction: column;
   margin-bottom: 16px;
   border: 1px solid var(--gray-100);
-  
+
 
   input {
     display: none;
@@ -108,5 +108,34 @@
 
   &:hover {
     filter: brightness(1.40);
+  }
+}
+
+.btnListProduct {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 690px;
+  margin: 16px auto;
+  height: 40px;
+  border-radius: 8px;
+  border: 0;
+  background-color: crimson;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  transition: all 0.5s;
+  color: #000000;
+  border: #39FF14;
+
+  &:hover {
+    // transform: scale(1) translateY(-1px);
+    box-shadow: 0 0 15px crimson;
+    background-color: transparent;
+    color: #39FF14;
+    border: #39FF14;
   }
 }

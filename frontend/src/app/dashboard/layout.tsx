@@ -8,10 +8,9 @@ export default function DashboardLayout({children}: {children: React.ReactNode})
   return(
     <>
       <Header/>
-
       <OrderProvider>    
         {children} 
-      </OrderProvider>         
+      </OrderProvider>       
     </>
   )
 }

@@ -6,7 +6,6 @@
   import { api } from "@/services/api";
   import { redirect } from "next/navigation"          // -- para redirecionar o usuario
 
-
   export default function Signup(){
 
     async function handleRegister(formData: FormData){
@@ -18,7 +17,6 @@
 
       if(name === "" && email === "" && password === ""){
         console.log('Preencha todos os campos')
-
         return;                                      // -- para parar
       }
 
@@ -27,20 +25,16 @@
           name: name,
           email: email,
           password: password
-        })
+        })        
 
       }catch(err){
         console.log("error");
         console.log(err);
-
-        // redirect("/signup");
       }
-
+      
       redirect("/")                             // -- para redirecionar o usuario
-
-      console.log(name, email, password);
+      // console.log(name, email, password);
     }
-
 
     return(
       <>
@@ -81,7 +75,7 @@
                placeholder="Sua senha"
               />
 
-              <button type={"submit"} className={styles.button}>
+              <button type={"submit"} className={styles.button}>                
                Cadastrar usuário
               </button>
 
